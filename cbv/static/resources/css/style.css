@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+h1 {
+    color: red;
+}
+
+table,
+th,
+td,
+tr{
+    border: 1px solid black;
+    text-align: centre;
+}
+
+img {
+    display: inline-block;
+    height: 250px;
+    width: auto;
+    overflow: hidden;
+}
+td {
+    padding: 5px;
+    }
+
+
+img:hover {
+    display: inline-block;
+    height: 250px;
+    width: auto;
+    overflow: hidden;
+    transform: scale(1.15);
+    transition: transform .5s opacity: 0.5s;
+}

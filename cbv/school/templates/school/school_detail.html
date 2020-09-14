@@ -1,0 +1,24 @@
+{% extends "school/base.html" %}
+{% block body_block %}
+  <div class="jumbotron">
+    <h1>Welcome to the School Detail Page</h1>
+    <h2>School Details:</h2>
+    <p>Id_num: {{school_details.id}}</p>
+    <p>Name: {{school_details.name}}</p>
+    <p>Principal: {{school_details.principal}}</p>
+    <p>Location: {{school_details.location}}</p>
+    <h3>Students:</h3>
+
+      {% for student in school_details.students.all %}
+        <p>{{student.name}} who is {{student.age}} years old. <a class="btn btn-primary" href="{% url 'school:update_student' pk=student.pk %}">Update student</a> <a class="btn btn-danger" href="{% url 'school:delete_student' pk=student.pk %}">Delete</a></p>
+      {% endfor %}
+
+  </div>
+
+<div class="container">
+  <a class="btn btn-warning" href="{% url 'school:update' pk=school_details.pk %}">Update</a>
+  <a class="btn btn-danger" href="{% url 'school:delete' pk=school_details.pk %}">Delete</a>
+  <a class="btn btn-primary" href="{% url 'school:create_student' pk=school_details.pk %}">Add student</a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'school/base.html' %}
+{% block body_block %}
+<div class="jumbotron">
+    <p>Are you sure you want delete the school {{ school.name }} from the system?</p>
+    <div class="container">
+        <form method="POST">
+            {% csrf_token %}
+        <input class="btn btn-danger" type="submit" value="Confirm">
+          <a class="btn btn-primary" href="{% url 'school:list'%}">Cancel</a>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

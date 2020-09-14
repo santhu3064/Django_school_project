@@ -1,0 +1,13 @@
+{% extends 'school/base.html' %}
+{% block body_block %}
+
+<ol>
+    <h1>Schools</h1>
+    {% for school in object_list %}
+    <li><a href="{{ school.id }}/">{{ school.name }} and {{ school.id }}</a></li>
+    {% endfor %}
+</ol>
+
+  <a class="btn btn-primary" href="{% url 'school:create' %}">ADD NEW SCHOOL</a>
+{% endblock %}
+

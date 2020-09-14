@@ -1,0 +1,15 @@
+{% extends 'school/base.html' %}
+{% block body_block %}
+
+<h2>The details fo the schools are below</h2>
+<ul>
+    <li>{{ object.name }}</li>
+    <li>{{ object.principal }}</li>
+    <li>{{ object.location }}</li>
+</ul>
+<h3>The details of students in the school are below</h3>
+{% for student in object.students.all %}
+<p>The student name is {{ student.name }} and age is {{ student.age }}</p>
+{% endfor %}
+
+{% endblock %}

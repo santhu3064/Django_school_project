@@ -17,9 +17,12 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.urls import include
 from helloworld.views import SampleView
+from school.views import SchoolListView,SchoolDetailView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^helloworld/',include('helloworld.urls')),
-    url(r'^$',SampleView.as_view())
+    url(r'^$',SampleView.as_view()),
+    url(r'^school/', include('school.urls', namespace='school')),
 ]
+

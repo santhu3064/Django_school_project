@@ -3,27 +3,6 @@
     padding: 0;
     box-sizing: border-box;
   }
-h1 {
-    color: red;
-}
-
-table,
-th,
-td,
-tr{
-    border: 1px solid black;
-    text-align: centre;
-}
-
-img {
-    display: inline-block;
-    height: 250px;
-    width: auto;
-    overflow: hidden;
-}
-td {
-    padding: 5px;
-    }
 
 
 img:hover {
@@ -34,3 +13,14 @@ img:hover {
     transform: scale(1.15);
     transition: transform .5s opacity: 0.5s;
 }
+.errorlist
+    {
+    border: 1px solid;
+	margin: 10px 0px;
+	padding: 15px 10px 15px 50px;
+	background-repeat: no-repeat;
+			background-position: 10px center;
+       		color: #D8000C;
+			background-color: #FFBABA;
+			background-image: url('https://i.imgur.com/GnyDvKN.png');
+    }

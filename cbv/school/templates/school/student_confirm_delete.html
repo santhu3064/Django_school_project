@@ -6,7 +6,9 @@
         <form method="POST">
             {% csrf_token %}
         <input class="btn btn-danger" type="submit" value="Confirm">
-          <a class="btn btn-primary" href="{% url 'school:list'%}">Cancel</a>
+<!--            <input class="btn btn-danger" type="submit" value="cancel">-->
+             <a href="{{ view.get_success_url }}" class="btn btn-primary">Cancel</a>
+<!--          <a class="btn btn-primary" href="{% url 'school:list'%}">Cancel</a>-->
         </form>
     </div>
 </div>

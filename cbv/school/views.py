@@ -9,6 +9,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 
 
+
 class SchoolListView(ListView):
     model = School
 
@@ -50,11 +51,11 @@ class StudentUpdateView(UpdateView):
     model = Student
     fields = ['name', 'age']
 
+
 class StudentDeleteView(DeleteView):
     model = Student
 
     def get_success_url(self):
-        # Assuming there is a ForeignKey from Comment to Post in your model
         school = self.object.school
         return reverse_lazy('school:detail', kwargs={'pk': school.id})
 
